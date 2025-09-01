@@ -16,48 +16,48 @@ const progressBar = document.getElementById("progress");
 
 const quizQuestions = [
   {
-    question: "What is the capital of France?",
+    question: "1. Which is the first month of the Islamic (Hijri) calendar??",
     answers: [
-      { text: "London", correct: false },
-      { text: "Berlin", correct: false },
-      { text: "Paris", correct: true },
-      { text: "Madrid", correct: false },
+      { text: "a) Ramadan", correct: false },
+      { text: "b) Dhul-Hijjah", correct: false },
+      { text: "c) Muharram", correct: true },
+      { text: "d) Safar", correct: false },
     ],
   },
   {
-    question: "Which planet is known as the Red Planet?",
+    question: "2. How many daily obligatory prayers (Salah) are there in Islam?",
     answers: [
-      { text: "Venus", correct: false },
-      { text: "Mars", correct: true },
-      { text: "Jupiter", correct: false },
-      { text: "Saturn", correct: false },
+      { text: "a) 3", correct: false },
+      { text: "b) 5", correct: true },
+      { text: "c) 2", correct: false },
+      { text: "d) 4", correct: false },
     ],
   },
   {
-    question: "What is the largest ocean on Earth?",
+    question: "3. Which angel brought revelation (Wahy) to Prophet Muhammad ﷺ?",
     answers: [
-      { text: "Atlantic Ocean", correct: false },
-      { text: "Indian Ocean", correct: false },
-      { text: "Arctic Ocean", correct: false },
-      { text: "Pacific Ocean", correct: true },
+      { text: "a) Angel Israfil", correct: false },
+      { text: "b) Angel Mikail", correct: false },
+      { text: "c) Angel Malik", correct: false },
+      { text: "d) Angel Jibreel (Gabriel)", correct: true },
     ],
   },
   {
-    question: "Which of these is NOT a programming language?",
+    question: "4. Which city is known as the birthplace of Prophet Muhammad ﷺ?",
     answers: [
-      { text: "Java", correct: false },
-      { text: "Python", correct: false },
-      { text: "Banana", correct: true },
-      { text: "JavaScript", correct: false },
+      { text: "a) Medina", correct: false },
+      { text: "b) Jerusalem", correct: false },
+      { text: "c) Mecca", correct: true },
+      { text: "d) Ta’if", correct: false },
     ],
   },
   {
-    question: "What is the chemical symbol for gold?",
+    question: "5. What is the second pillar of Islam after Shahadah?",
     answers: [
-      { text: "Go", correct: false },
-      { text: "Gd", correct: false },
-      { text: "Au", correct: true },
-      { text: "Ag", correct: false },
+      { text: "a) Zakat", correct: false },
+      { text: "b) Sawm (Fasting)", correct: false },
+      { text: "c) Salah (Prayer)", correct: true },
+      { text: "d) Hajj", correct: false },
     ],
   },
 ];
@@ -75,6 +75,7 @@ startButton.addEventListener("click", startQuiz);
 restartButton.addEventListener("click", restartQuiz);
 
 function startQuiz() {
+    
   // reset vars
   currentQuestionIndex = 0;
   score = 0;

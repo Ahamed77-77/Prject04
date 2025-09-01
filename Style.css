@@ -2,11 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
-
     background: #f5efe6;
     display: flex;
     justify-content: center;
@@ -24,44 +22,41 @@ body {
     max-width: 600px;
     overflow: hidden;
     position: relative;
-
 }
 
-/*Screen 1*/
+/* SCREENS */
 .screen {
     display: none;
     padding: 2rem;
     text-align: center;
-
 }
 
 .screen.active {
     display: block;
 }
 
-/*Start Screen*/
-#start-screen h1 {
-    color: #e86a33;
-    margin: 20px;
-    font-size: 2.5em;
+/* START SCREEN */
 
+#start-screen h1 {
+    color: #0A6847;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
 }
 
 #start-screen p {
-    color: #666;
+    color: #0A6847;
     margin-bottom: 30px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 .quiz-header {
-    margin-bottom: 30px;
-
+    margin-bottom: 1rem;
 }
 
 #question-text {
-    font-size: 1.5em;
-    margin-bottom: 1rem;
     color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.4;
 }
 
@@ -72,12 +67,11 @@ body {
     margin-bottom: 10px;
 }
 
-.answer-container {
+.answers-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 25px;
-
 }
 
 .answer-btn {
@@ -94,11 +88,16 @@ body {
 .answer-btn:hover {
     background-color: #eadbc8;
     border-color: #dac0ae;
-
 }
 
 .answer-btn.correct {
     background-color: #e6fff0;
+    border-color: #a3f0c4;
+    color: #28a745;
+}
+
+.answer-btn.incorrect {
+    background-color: #fff0f0;
     border-color: #ffbdbd;
     color: #dc3545;
 }
@@ -109,23 +108,20 @@ body {
     border-radius: 5px;
     overflow: hidden;
     margin-top: 20px;
-
-
 }
 
 .progress {
-
     height: 100%;
     background-color: #e86a33;
     width: 0%;
     transition: width 0.3s ease;
 }
 
-/*RESULT SCREEN*/
+/* RESULT SCREEN */
+
 #result-screen h1 {
     color: #e86a33;
     margin-bottom: 30px;
-
 }
 
 .result-info {
@@ -141,6 +137,12 @@ body {
     margin-bottom: 1rem;
 }
 
+#result-message {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e86a33;
+}
+
 button {
     background-color: #e86a33;
     color: white;
@@ -149,19 +151,41 @@ button {
     padding: 15px 30px;
     font-size: 1.1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #d45b28;
 }
 
-/*responsive design*/
-@media (max-width: 600px) {
+/* RESPONSIVE DESIGN */
+@media (max-width: 500px) {
+    /* when we hit 500px and below, implement the styles below */
+
     .screen {
         padding: 1rem;
     }
+
     #start-screen h1 {
-        font-size: 2em;
+        font-size: 2rem;
     }
-    
+
+    #question-text {
+        font-size: 1.3rem;
+    }
+
+    .answer-btn {
+        padding: 12px;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+#igp{
+    color: blue;
+    font-size: 0.8rem;
+    background-color:blue ;
 }
